@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#C47A3A">
+<meta name="description" content="年上年下恋爱测试。18 道原创题，测你更适合姐弟恋还是大叔恋。娱乐向自我观察，非正式心理测量。标签是成年关系角色偏好线索，不是年龄歧视。">
+<meta property="og:title" content="年上年下恋爱测试 · 你适合姐弟恋还是大叔恋">
+<meta property="og:description" content="六维画像 · 大叔恋指数 · 六档锐评。娱乐向自我观察，非正式心理测量。">
+<meta property="og:url" content="https://zengpenghui420-glitch.github.io/age-gap-love/">
+<link rel="canonical" href="https://zengpenghui420-glitch.github.io/age-gap-love/">
+<title>年上年下恋爱测试 · 你适合姐弟恋还是大叔恋</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C47A3A'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23FBF0E4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23FBF0E4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#FBF6F0;--card:#FFFCF8;--ink:#3A2A22;--muted:#7A5E4A;--faint:#B08A6A;
+  --ink-deep:#2C2118;--berry:#C47A3A;--berry-deep:#A35A28;--plum:#8B3A4A;--plum-deep:#5C2A32;
+  --cream:#FBF0E4;--line:#E8D4C0;--panel:#F3E8DC;
+  --sb:env(safe-area-inset-bottom,0px);--st:env(safe-area-inset-top,0px)
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#EDE4D8;color-scheme:light}
+body{
+  max-width:430px;margin:0 auto;min-height:100dvh;color:var(--ink);line-height:1.6;
+  font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at 12% -4%, rgba(196,122,58,.35), transparent 42%),
+    radial-gradient(circle at 96% 6%, rgba(139,58,74,.22), transparent 40%),
+    linear-gradient(180deg,#FFFCF8,#FBF6F0 48%,#F3E8DC);
+  overflow-x:hidden
+}
+body.lock{overflow:hidden}
+button,input{font-family:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--berry);outline-offset:2px}
+[hidden]{display:none !important}
+.screen{display:none}
+.screen.active{display:block}
+#start.active,#quiz.active,#loading.active{display:flex;flex-direction:column;min-height:100dvh}
+#loading.active{align-items:center;justify-content:center;text-align:center;padding:24px}
+#start{padding:calc(22px + var(--st)) 22px calc(22px + var(--sb));text-align:center}
+.mark{width:120px;height:120px;margin:8px auto 10px}
+.mark svg{width:100%;height:auto;display:block}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--berry-deep);font-weight:600;margin-bottom:8px}
+h1{font-size:26px;line-height:1.35;font-weight:700;letter-spacing:.5px;margin-bottom:8px;color:var(--ink-deep)}
+.sub{font-size:16px;color:#6A4A32;margin-bottom:8px}
+.warm{font-size:13px;color:var(--muted);margin-bottom:14px}
+.dim-intro{list-style:none;text-align:left;display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+.dim-intro li{display:flex;gap:10px;align-items:center;background:rgba(255,252,248,.94);border:1px solid var(--line);border-radius:16px;padding:8px 12px}
+.dim-intro i{flex:0 0 28px;width:28px;height:28px;border-radius:9px;background:rgba(196,122,58,.28);color:#6A4A32;font-style:normal;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.dim-intro b{display:block;font-size:14px;line-height:1.3}
+.dim-intro span{display:block;font-size:12px;color:var(--muted);line-height:1.45}
+.pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+.pill{padding:5px 10px;border-radius:999px;background:rgba(255,252,248,.94);border:1px solid var(--line);color:#6A4A32;font-size:12px}
+.btn-primary{width:100%;padding:15px 16px;border:none;border-radius:28px;background:linear-gradient(180deg,#C47A3A,#A35A28);color:#FFF8F0;font-size:17px;font-weight:700;box-shadow:0 8px 18px rgba(163,90,40,.28)}
+.btn-primary:active{transform:scale(.98)}
+.btn-primary:disabled{opacity:.65}
+.btn-ghost{width:100%;margin-top:10px;padding:13px 16px;border-radius:28px;border:1.5px solid #D8B898;background:rgba(255,252,248,.94);color:#6A4A32;font-size:15px;font-weight:600}
+.btn-ghost:active{transform:scale(.98)}
+.hint{margin-top:14px;font-size:12px;color:var(--faint);line-height:1.6}
+.disclaimer{margin-top:16px;padding:12px 12px 12px 14px;background:#F3E8DC;border:1px solid #E0D0BC;border-left:4px solid var(--berry);border-radius:14px;color:#3A2A22;font-size:13px;line-height:1.7;text-align:left}
+.disclaimer strong{font-weight:700}
+.safety{margin:4px 0 12px;padding:12px 12px 12px 14px;background:#FBF0E4;border:1px solid #E8C8A8;border-left:4px solid var(--plum);border-radius:14px;color:#3A2A22;font-size:13px;line-height:1.7}
+.qh{padding:14px 18px 12px;background:rgba(251,246,240,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+.qrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.qback{background:none;border:none;color:var(--muted);font-size:14px;padding:4px 0}
+.qprog{font-size:13px;color:var(--berry-deep);font-weight:700}
+.track{height:6px;background:#E8D4C0;border-radius:3px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#D8A060,#C47A3A);border-radius:3px;transition:width .3s}
+.qbody{padding:22px 20px 28px}
+.qno{font-size:12px;letter-spacing:2px;color:var(--berry-deep);font-weight:700;margin-bottom:8px}
+.qtext{font-size:20px;font-weight:700;line-height:1.5;margin-bottom:18px;color:var(--ink-deep)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 14px;background:rgba(255,252,248,.96);border:1.5px solid var(--line);border-radius:16px;color:var(--ink);font-size:15px;box-shadow:0 3px 0 rgba(232,212,192,.9)}
+.opt .onum{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:rgba(196,122,58,.28);color:#6A4A32;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.opt.sel,.opt:active{border-color:var(--berry);background:rgba(196,122,58,.16);color:#2C2118}
+.opt.sel .onum{background:var(--berry-deep);color:#FFF8F0}
+.loader{width:40px;height:40px;border:3px solid #E8D4C0;border-top-color:var(--berry-deep);border-radius:50%;animation:sp .8s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.load-title{font-weight:700;color:var(--ink-deep)}
+.load-sub{margin-top:6px;font-size:13px;color:var(--faint)}
+#result{padding-bottom:calc(196px + var(--sb))}
+.rtop{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(251,246,240,.94);border-bottom:1px solid var(--line);font-size:14px;font-weight:700;backdrop-filter:blur(8px)}
+.rtop span:last-child{font-weight:500;color:#6A4A32;font-size:13px}
+.result-body{padding:16px 16px 8px}
+.card{position:relative;background:linear-gradient(180deg,rgba(255,252,248,.98),rgba(251,246,240,.94));border:1px solid var(--line);border-radius:22px;padding:18px 16px 16px;margin-bottom:12px;box-shadow:0 10px 24px rgba(44,33,24,.05)}
+.kicker{font-size:12px;letter-spacing:4px;color:var(--berry-deep);font-weight:700}
+.index-num{font-size:56px;line-height:.95;font-weight:700;color:var(--ink-deep);letter-spacing:-1px;margin:4px 0 2px}
+.index-max{font-size:12px;color:var(--faint);margin-bottom:10px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap}
+.lv{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(196,122,58,.28);color:#6A4A32;font-size:13px;font-weight:700}
+.lv-line{margin-top:8px;font-size:14px;color:#4A3828;line-height:1.65}
+.lead{margin-top:14px;font-size:12px;letter-spacing:2px;color:#6A4A32;font-weight:700}
+.type-title{font-size:28px;line-height:1.25;margin:4px 0 6px;color:var(--ink-deep)}
+.punch{font-size:15px;line-height:1.7;color:#4A3828}
+.egg{margin-top:10px;padding:8px 10px;border-radius:12px;background:rgba(196,122,58,.16);color:#6A4A32;font-size:13px;line-height:1.55}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tag{padding:4px 10px;border-radius:999px;background:rgba(196,122,58,.22);color:#6A4A32;font-size:12px;font-weight:600}
+.note{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.6}
+.st{font-size:16px;font-weight:700;letter-spacing:1px;margin-bottom:12px}
+.st:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:2px;background:var(--berry);transform:translateY(-1px) rotate(45deg)}
+.fine{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.65}
+.radar-box svg{width:100%;height:auto;display:block}
+.bar{margin-top:12px}
+.bar-h{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700}
+.bar-h b{color:var(--berry-deep);font-size:16px}
+.bar-track{height:8px;background:#E8D4C0;border-radius:99px;overflow:hidden;margin-top:4px}
+.bar-fill{height:100%;width:0;background:linear-gradient(90deg,#D8A060,#C47A3A);border-radius:99px}
+.bullets{list-style:none;display:flex;flex-direction:column;gap:10px}
+.bullets li{position:relative;padding-left:14px;font-size:14.5px;line-height:1.7;color:#2C2118}
+.bullets li:before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--berry-deep)}
+.score-grid{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.dim-read{padding:12px 0;border-top:1px solid var(--line)}
+.dim-read:first-of-type{border-top:none;padding-top:0}
+.dim-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.dn{font-size:14px;font-weight:700}
+.ds{font-size:18px;font-weight:700;color:#6A4A32}
+.dim-read p{margin-top:4px;font-size:13.5px;color:var(--muted);line-height:1.7}
+#result .disclaimer{margin:4px 0 12px}
+.acts{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:8px 12px calc(10px + var(--sb));background:rgba(255,252,248,.97);border-top:1px solid var(--line);z-index:20;display:flex;flex-direction:column;gap:6px}
+.acts-note{font-size:11px;color:var(--muted);text-align:center;line-height:1.45}
+.acts-row{display:flex;gap:8px}
+.acts-row button{flex:1;padding:11px 4px;border-radius:22px;font-size:13px;font-weight:700}
+.bo{border:1.5px solid #D8B898;background:#fff;color:#6A4A32}
+.bp{border:none;background:linear-gradient(180deg,#C47A3A,#A35A28);color:#FFF8F0}
+.ov{position:fixed;inset:0;background:rgba(44,33,24,.82);z-index:200;display:none;flex-direction:column;align-items:center;padding:16px 16px calc(16px + var(--sb));overflow-y:auto}
+.ov.show{display:flex}
+.ov img{width:min(100%,400px);border-radius:16px;background:#FBF6F0}
+.ovh{color:#FFF8F0;font-size:14px;margin:8px 0 12px}
+.ovb{display:flex;gap:10px;width:100%;max-width:400px;margin-top:12px}
+.ovb button{flex:1;padding:12px;border:none;border-radius:22px;font-size:15px;font-weight:700}
+.ovb .save{background:#fff;color:var(--ink)}
+.ovb .shut{background:rgba(255,252,248,.16);color:#FFF8F0}
+.toast{position:fixed;bottom:calc(210px + var(--sb));left:50%;transform:translateX(-50%);background:rgba(44,33,24,.92);color:#FFF8F0;padding:10px 16px;border-radius:20px;font-size:13px;z-index:300;opacity:0;transition:opacity .3s;pointer-events:none;max-width:88%;text-align:center}
+.toast.show{opacity:1}
+.code-mask{position:fixed;inset:0;background:rgba(44,33,24,.48);z-index:150;display:none;align-items:center;justify-content:center;padding:20px}
+.code-mask.show{display:flex}
+.code-panel-wrap{position:relative;width:100%;max-width:340px}
+.code-panel{background:#FFFCF8;border:1.5px solid var(--line);border-radius:22px;padding:24px 18px 18px;box-shadow:0 16px 40px rgba(44,33,24,.2);text-align:center}
+.code-panel h3{font-size:18px;margin-bottom:14px;color:var(--ink-deep)}
+.code-panel input{width:100%;padding:14px 12px;border:1.5px solid var(--line);border-radius:14px;font-size:18px;letter-spacing:2px;text-align:center;color:var(--ink);background:#FBF6F0;outline:none}
+.code-panel input:focus{border-color:var(--berry);background:#fff}
+.code-panel .btn-primary{margin-top:12px}
+.code-hint{margin-top:12px;font-size:12px;color:var(--faint);line-height:1.6}
+.code-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:22px;color:var(--faint);line-height:1;padding:4px}
+@media (prefers-reduced-motion:reduce){.fill,.toast,.bar-fill{transition:none}.loader{animation:none}}
+</style>
+</head>
+<body>
+<section id="start" class="screen active">
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 120 120">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#D8A060"/>
+          <stop offset="100%" stop-color="#C47A3A"/>
+        </linearGradient>
+      </defs>
+      <rect x="8" y="8" width="104" height="104" rx="28" fill="#FBF0E4"/>
+      <rect x="8" y="8" width="104" height="104" rx="28" fill="none" stroke="#E8D4C0" stroke-width="2"/>
+      <circle cx="42" cy="58" r="16" fill="none" stroke="url(#g1)" stroke-width="5"/>
+      <circle cx="78" cy="58" r="22" fill="none" stroke="#8B3A4A" stroke-width="5" opacity=".85"/>
+      <path d="M54 58h12" stroke="#A35A28" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="42" cy="58" r="4" fill="#C47A3A"/>
+      <circle cx="78" cy="58" r="5" fill="#8B3A4A"/>
+    </svg>
+  </div>
+  <p class="eyebrow">娱乐向 · 自我观察</p>
+  <h1>年上年下恋爱测试</h1>
+  <p class="sub">你适合姐弟恋还是大叔恋</p>
+  <p class="warm">锐利但友善 · 标签是取向线索，不是年龄歧视</p>
+  <ul class="dim-intro">
+    <li><i>M</i><div><b>成熟引力</b><span>被稳重、兜底、有分寸感吸引</span></div></li>
+    <li><i>Y</i><div><b>元气引力</b><span>被直球、新鲜感、活力吸引</span></div></li>
+    <li><i>C</i><div><b>被护需求</b><span>想被接住、被安排、被托底</span></div></li>
+    <li><i>L</i><div><b>掌舵意愿</b><span>想主导节奏、照顾、带对方成长</span></div></li>
+    <li><i>S</i><div><b>安稳节律</b><span>偏好可预期、少折腾的相处</span></div></li>
+    <li><i>V</i><div><b>活力节律</b><span>偏好临时起意、玩闹充电</span></div></li>
+  </ul>
+  <div class="pills"><span class="pill">18 道题</span><span class="pill">六维雷达</span><span class="pill">大叔恋指数</span></div>
+  <button class="btn-primary" id="btnStart" type="button">开始测试</button>
+  <button class="btn-ghost" id="btnLast" type="button" hidden>查看上次结果</button>
+  <p class="hint">单选 · 没有标准答案 · 仅指成年人偏好，不是诊断</p>
+  <p class="disclaimer" id="startDisclaimer"></p>
+</section>
+
+<section id="quiz" class="screen">
+  <div class="qh">
+    <div class="qrow"><button class="qback" id="qback" type="button">← 返回</button><span class="qprog" id="qprog"></span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+  <div class="qbody">
+    <div class="qno" id="qno"></div>
+    <div class="qtext" id="qtext"></div>
+    <div class="opts" id="opts"></div>
+  </div>
+</section>
+
+<section id="loading" class="screen">
+  <div class="loader"></div>
+  <div class="load-title">正在对齐年龄差恋爱雷达…</div>
+  <div class="load-sub">姐弟恋 ↔ 大叔恋校准中</div>
+</section>
+
+<section id="result" class="screen">
+  <div class="rtop"><span>年上年下恋爱测试</span><span id="resultMeta"></span></div>
+  <div class="result-body" id="resultBody"></div>
+  <div class="acts">
+    <p class="acts-note">娱乐向自我观察 · 非正式心理测量 · 标签非年龄歧视</p>
+    <div class="acts-row">
+      <button class="bo" id="btnViewLast" type="button">查看上次</button>
+      <button class="bo" id="btnCopy" type="button">复制文案</button>
+      <button class="bp" id="btnImg" type="button">生成卡片</button>
+    </div>
+    <div class="acts-row">
+      <button class="bp" id="btnRetry" type="button" style="flex:1">重新测试</button>
+    </div>
+  </div>
+</section>
+
+<div class="code-mask" id="codeMask" aria-hidden="true">
+  <div class="code-panel-wrap">
+    <button class="code-close" id="codeClose" type="button" aria-label="关闭">×</button>
+    <div class="code-panel">
+      <h3>输入验证码</h3>
+      <input id="codeInput" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" maxlength="8" placeholder="AGXXXX" aria-label="验证码">
+      <button class="btn-primary" id="btnCodeOk" type="button">开始答题</button>
+      <p class="code-hint">每码可测 3 次。重新测试会再扣 1 次；查看上次结果不扣次。</p>
+    </div>
+  </div>
+</div>
+
+<div class="ov" id="ov" aria-hidden="true">
+  <p class="ovh">长按图片保存，或点下方下载</p>
+  <img id="shareImg" alt="分享卡片">
+  <div class="ovb">
+    <button class="save" id="btnDl" type="button">下载图片</button>
+    <button class="shut" id="btnClose" type="button">关闭</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;text-align:center">请开启 JavaScript 后使用本测验。</p></noscript>
+<script>
+const API_BASE='https://snappy-tundra-7uesdvk.tmp.now';
+const QUIZ_KEY='age';
+const ACCESS_KEY='age_unlocked';
+const ACCESS_CODE_KEY='age_code';
+const LAST_KEY='age_last_result';
+const CODE_RE=/^AG[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{4}$/i;
+const URL_='https://zengpenghui420-glitch.github.io/age-gap-love/';
+const DISCLAIMER='本测试为娱乐向自我观察，非正式心理测量，不能替代专业评估。「年上 / 年下 / 姐弟恋 / 大叔恋」描述的是成年人对关系角色与气质的偏好线索，不是年龄歧视，也不等于真实年龄差要求；现实关系远比标签复杂。';
+const SAFETY_NOTE='年龄标签只是偏好线索，不是择偶命令；尊重边界与自主，成年人关系应建立在自愿与平等上。';
+const FONT='"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",sans-serif';
+const CHOICES=[{v:1,t:'完全不像我'},{v:2,t:'不太像'},{v:3,t:'说不清'},{v:4,t:'有点像'},{v:5,t:'非常像我'}];
+const DIM_IDS=['M','Y','C','L','S','V'];
+const DIM_META={
+  M:{name:'成熟引力', tip:'被稳重、兜底、有分寸感吸引', high:'心动常落在「能罩住我」的人身上', low:'成熟稳重不一定最撩你',
+    engine:'你的取向主引擎是「成熟引力」：分寸感与兜底能力最容易让你心动。'},
+  Y:{name:'元气引力', tip:'被直球、新鲜感、活力吸引', high:'更吃「元气直球」那一挂', low:'单纯活泼未必打动你',
+    engine:'你的取向主引擎是「元气引力」：直球与新鲜感比稳重叙事更戳你。'},
+  C:{name:'被护需求', tip:'想被接住、被安排、被托底', high:'累了想躲进避风港', low:'更想并肩扛，少被包办',
+    engine:'你的取向主引擎是「被护需求」：被接住、被托底会让你真正松口气。'},
+  L:{name:'掌舵意愿', tip:'想主导节奏、照顾、带对方成长', high:'自然想当关系里的姐姐/哥哥位', low:'不太想当「带飞」的那一个',
+    engine:'你的取向主引擎是「掌舵意愿」：你更习惯规划、安抚、给方向。'},
+  S:{name:'安稳节律', tip:'偏好可预期、少折腾的相处', high:'可预期的相处比说走就走更香', low:'太安稳反而觉得闷',
+    engine:'你的取向主引擎是「安稳节律」：少折腾、可预期的节奏让你更踏实。'},
+  V:{name:'活力节律', tip:'偏好临时起意、玩闹充电', high:'关系要有火花与即兴才够味', low:'玩闹感不是刚需',
+    engine:'你的取向主引擎是「活力节律」：即兴与玩闹像给关系充电。'}
+};
+
+const QS=[
+  {id:'M1', dim:'M', t:'对方说话有分寸、遇事能先稳住场面，会比单纯好看更让你心动。'},
+  {id:'M2', dim:'M', t:'你更容易被「把后路想好再约你出门」的人打动，而不是说走就走的冲动派。'},
+  {id:'M3', dim:'M', rev:true, t:'太成熟、太会安排的人，有时会让你觉得少了点火花。'},
+  {id:'Y1', dim:'Y', t:'对方直球说喜欢、会制造小惊喜，比「稳稳的」更让你脸红。'},
+  {id:'Y2', dim:'Y', t:'你会被元气、话多、带你玩的人吸引，哪怕对方偶尔有点小幼稚。'},
+  {id:'Y3', dim:'Y', rev:true, t:'太活泼、太需要你哄着玩的人，相处久了你会觉得累。'},
+  {id:'C1', dim:'C', t:'加班崩溃时，你更希望对方把灯调暗、递杯热水，而不是拉你立刻去狂欢泄压。'},
+  {id:'C2', dim:'C', t:'重要决定前，你希望对方能给你靠谱建议或兜底，而不是全推给你自己扛。'},
+  {id:'C3', dim:'C', rev:true, t:'你不太喜欢被过度安排；对方包办一切会让你有点窒息。'},
+  {id:'L1', dim:'L', t:'约会路线、餐厅和备选方案，你常常自然地揽下来规划。'},
+  {id:'L2', dim:'L', t:'对方迷茫或闹小情绪时，你会下意识先接手安抚、给方向。'},
+  {id:'L3', dim:'L', rev:true, t:'你更享受被对方带着走，很少想当关系里的「负责人」。'},
+  {id:'S1', dim:'S', t:'你更喜欢可预期的周末：散步、吃饭、宅家，而不是天天临时起意。'},
+  {id:'S2', dim:'S', t:'聊未来时，有时间表、有存钱/生活规划的人会让你更踏实。'},
+  {id:'S3', dim:'S', rev:true, t:'太规律、太「计划表恋爱」会让你觉得闷，想加点不确定性。'},
+  {id:'V1', dim:'V', t:'临时被拉去音乐节、宵夜或说走就走的小旅行，你会觉得关系被点亮了。'},
+  {id:'V2', dim:'V', t:'冷战时对方用玩笑、零食或搞怪破冰，比严肃长谈更对你胃口。'},
+  {id:'V3', dim:'V', rev:true, t:'高强度玩闹和即兴安排，多数时候会消耗你，而不是充电。'}
+];
+
+const TIERS=[
+  {id:'SISTER', min:0, max:20, name:'姐弟恋本命 · 带飞小太阳', punch:'你更想宠人，而不是被罩着',
+    traits:[
+      '更想宠人、掌舵、给方向，自然站在「我来」这一侧。',
+      '元气直球、新鲜感比「稳稳的」更让你心动。',
+      '完全被包办、被安排，未必觉得甜，反而可能闷。',
+      '安稳节律不是刚需，共成长与火花更重要。',
+      '姐弟恋气质对你来说，是角色匹配，不是身份证匹配。'
+    ],
+    advice:[
+      '选愿意成长、尊重边界的对象，别把恋爱过成带娃。',
+      '掌舵不等于承包对方全部情绪——留一点松弛给自己。',
+      '把「我想主导什么」说清楚，减少默认承包。',
+      '允许自己偶尔被哄，强势不是二十四小时班。'
+    ]},
+  {id:'GUIDE', min:21, max:40, name:'偏姐弟恋 · 温柔掌舵手', punch:'主导感舒服，偶尔也能被哄',
+    traits:[
+      '主导节奏大多舒服，偶尔被照顾也会心安。',
+      '更吃新鲜感与共成长，不完全排斥成熟分寸。',
+      '被护需求中等：想被懂，但不想被包办。',
+      '活力节律偏高，安稳叙事加分但不封顶。',
+      '更像「温柔掌舵」而不是「全权托付」。'
+    ],
+    advice:[
+      '明确哪些事你想主导、哪些事愿意交出去。',
+      '允许对方照顾你，不必永远强势。',
+      '把「我想带你」翻译成具体行动，而不是情绪承包。',
+      '对味优先于年龄差标签。'
+    ]},
+  {id:'FLUID', min:41, max:55, name:'无龄感适配 · 双向皆可', punch:'标签不重要，对味才重要',
+    traits:[
+      '成熟与元气都能入眼，很少被单一标签绑死。',
+      '能在照顾与被照顾之间切换。',
+      '安稳与活力都可接受，看对方与场景。',
+      '姐弟恋 / 大叔恋对你都是可选剧本，不是命运。',
+      '真正决定的是相处舒不舒服。'
+    ],
+    advice:[
+      '按具体的人选择，不按身份证。',
+      '先问「相处舒不舒服」，再谈年龄差叙事。',
+      '把偏好当线索，别当筛选器的唯一刻度。',
+      '和对方聊聊彼此舒服的角色分工。'
+    ]},
+  {id:'LEAN', min:56, max:70, name:'偏大叔恋 · 被接住就安心', punch:'想被偏爱，仍保留独立口',
+    traits:[
+      '想被偏爱与托底，但仍留独立呼吸口。',
+      '成熟分寸感明显加分，完全包办会轻微不适。',
+      '被护需求上升，掌舵意愿不是最强音。',
+      '可预期节律更踏实，玩闹是调剂不是主菜。',
+      '更靠近「被接住」的叙事，但仍要主见。'
+    ],
+    advice:[
+      '把「想被接住」说清楚，同时守住主见。',
+      '接受照顾不等于交出所有决定权。',
+      '选能兜底也尊重你边界的人。',
+      '偶尔主动安排一次，保持关系双向。'
+    ]},
+  {id:'HARBOR', min:71, max:85, name:'大叔恋浓度高 · 避风港体质', punch:'稳重兜底比火花更戳你',
+    traits:[
+      '稳重兜底比火花更戳你，累了想躲进港湾。',
+      '成熟引力与被护需求都偏高。',
+      '可预期节律加分，高强度即兴容易耗电。',
+      '掌舵意愿偏低：更想被带着把关，而不是天天带飞。',
+      '大叔恋气质对你是安全感配方，不只是浪漫标签。'
+    ],
+    advice:[
+      '选情绪稳定、有边界感的人。',
+      '也练习自己扛一小块，避免把安全感外包到极限。',
+      '确认「罩住」是尊重不是控制。',
+      '保留一块只属于你的日程与朋友圈。'
+    ]},
+  {id:'DAD', min:86, max:100, name:'大叔恋本命 · 全权托付型', punch:'成熟可靠是刚需，不是加分项',
+    traits:[
+      '成熟可靠是刚需：分寸、兜底、规划都很难让步。',
+      '被护与安稳节律拉满，玩闹耐受偏低。',
+      '元气直球可能可爱，但很难单独撑起安全感。',
+      '很少想当带飞位，更想把后背交给靠谱的人。',
+      '标签背后是强烈的「被接住」需求。'
+    ],
+    advice:[
+      '托付可以，自我不能丢。',
+      '确认对方的「罩住」建立在自愿与平等上。',
+      '重大决定仍要发出自己的声音。',
+      '成年人偏好 ≠ 放弃自主；关系是搭档，不是监护。'
+    ]}
+];
+
+let ans=[], qi=0, picking=false, codeBusy=false, current=null, order=[];
+
+function $(id){return document.getElementById(id)}
+function el(tag, cls, text){
+  const n=document.createElement(tag);
+  if(cls) n.className=cls;
+  if(text!=null) n.textContent=text;
+  return n;
+}
+function esc(s){return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  $(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function toast(msg){
+  const t=$('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(toast._tm);
+  toast._tm=setTimeout(()=>t.classList.remove('show'),2200);
+}
+function itemScore(q,v){return q.rev?6-v:v}
+function to100(mean){return Math.round(Math.max(0,Math.min(100,((mean-1)/4)*100)))}
+function shuffle(arr){
+  const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    const t=a[i];a[i]=a[j];a[j]=t;
+  }
+  return a;
+}
+function scoreFromAnswers(list){
+  const buckets={M:[],Y:[],C:[],L:[],S:[],V:[]};
+  list.forEach((v,i)=>{
+    const q=QS[order[i]];
+    buckets[q.dim].push(itemScore(q,v));
+  });
+  const scores={};
+  DIM_IDS.forEach(id=>{
+    const arr=buckets[id];
+    const mean=arr.reduce((s,x)=>s+x,0)/arr.length;
+    scores[id]=to100(mean);
+  });
+  return scores;
+}
+function indexOf(scores){
+  // 大叔恋指数：M/C/S 正向，Y/L/V 反向
+  const parts=[scores.M, 100-scores.Y, scores.C, 100-scores.L, scores.S, 100-scores.V];
+  const sum=parts.reduce((s,x)=>s+x,0);
+  return Math.round(sum/parts.length);
+}
+function tierOf(index){
+  const n=Math.max(0,Math.min(100,index));
+  for(const t of TIERS){
+    if(n>=t.min && n<=t.max) return t;
+  }
+  return TIERS[TIERS.length-1];
+}
+function dominantOf(scores){
+  let best=DIM_IDS[0], bestScore=scores[DIM_IDS[0]];
+  for(let i=1;i<DIM_IDS.length;i++){
+    const id=DIM_IDS[i];
+    if(scores[id]>bestScore){best=id;bestScore=scores[id]}
+  }
+  return best;
+}
+function analyze(scores){
+  const index=indexOf(scores);
+  const tier=tierOf(index);
+  const dom=dominantOf(scores);
+  return {
+    scores,
+    index,
+    tierId:tier.id,
+    name:tier.name,
+    punch:tier.punch,
+    traits:tier.traits,
+    advice:tier.advice,
+    dominant:dom,
+    dominantName:DIM_META[dom].name,
+    engine:DIM_META[dom].engine
+  };
+}
+function fillDisclaimer(node){
+  node.textContent='';
+  const marks=['非正式心理测量','不能替代专业评估','不是年龄歧视'];
+  const re=new RegExp('('+marks.map(m=>m.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')');
+  DISCLAIMER.split(re).forEach(part=>{
+    if(marks.indexOf(part)>=0) node.appendChild(el('strong',null,part));
+    else if(part) node.appendChild(document.createTextNode(part));
+  });
+}
+function radarSVG(r){
+  const dims=DIM_IDS.map(id=>({name:DIM_META[id].name, score:r.scores[id]}));
+  const cx=220, cy=230, R=92, n=dims.length;
+  const pt=(i,v)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const rr=Math.max(0,Math.min(100,v))/100*R;
+    return [cx+rr*Math.cos(a), cy+rr*Math.sin(a)];
+  };
+  let rings='', axes='', nums='';
+  [25,50,75,100].forEach(k=>{
+    const pts=[];
+    for(let i=0;i<n;i++) pts.push(pt(i,k).map(v=>v.toFixed(1)).join(','));
+    const strong=k===50||k===100;
+    rings+='<polygon points="'+pts.join(' ')+'" fill="'+(k===100?'rgba(196,122,58,0.08)':'none')+'" stroke="'+(strong?'#D8B898':'#E8D4C0')+'" stroke-width="'+(strong?'1.6':'1')+'"/>';
+    const wedge=-Math.PI/3;
+    const sx=cx+(k/100)*R*Math.cos(wedge);
+    const sy=cy+(k/100)*R*Math.sin(wedge);
+    nums+='<text x="'+sx.toFixed(1)+'" y="'+sy.toFixed(1)+'" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#B08A6A">'+k+'</text>';
+  });
+  for(let i=0;i<n;i++){
+    const p=pt(i,100);
+    axes+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#E8D4C0" stroke-width="1"/>';
+  }
+  const poly=dims.map((d,i)=>pt(i,d.score).map(v=>v.toFixed(1)).join(',')).join(' ');
+  const dots=dims.map((d,i)=>{
+    const p=pt(i,d.score);
+    return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4.2" fill="#FBF6F0" stroke="#C47A3A" stroke-width="2"/>';
+  }).join('');
+  let labels='';
+  const halo=' stroke="#FBF6F0" stroke-width="4" paint-order="stroke"';
+  dims.forEach((d,i)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const lr=R+52;
+    const x=cx+lr*Math.cos(a);
+    const y=cy+lr*Math.sin(a);
+    const anchor=Math.abs(Math.cos(a))<0.35?'middle':(Math.cos(a)>0?'start':'end');
+    labels+='<text x="'+x.toFixed(1)+'" y="'+(y-8).toFixed(1)+'" text-anchor="'+anchor+'" font-size="12" fill="#2C2118"'+halo+'>'+esc(d.name)+'</text>';
+    labels+='<text x="'+x.toFixed(1)+'" y="'+(y+10).toFixed(1)+'" text-anchor="'+anchor+'" font-size="15" font-weight="700" fill="#6A4A32"'+halo+'>'+d.score+'</text>';
+  });
+  const aria='六维雷达图，刻度 0 到 100。'+dims.map(d=>d.name+' '+d.score).join('，');
+  return '<svg viewBox="0 0 440 470" role="img" aria-label="'+esc(aria)+'">'+
+    rings+axes+
+    '<polygon points="'+poly+'" fill="rgba(196,122,58,0.38)" stroke="#A35A28" stroke-width="2.4" stroke-linejoin="round"/>'+
+    dots+nums+labels+'</svg>';
+}
+function renderResult(r){
+  current=r;
+  const root=$('resultBody');
+  root.textContent='';
+  $('resultMeta').textContent=r.name+' · '+r.index;
+
+  const hero=el('section','card');
+  hero.appendChild(el('p','kicker','大叔恋指数'));
+  hero.appendChild(el('p','index-num',String(r.index)));
+  hero.appendChild(el('p','index-max','越高越偏大叔恋气质 · 0–100'));
+  const badge=el('div','badge-row');
+  badge.appendChild(el('span','lv',r.tierId));
+  hero.appendChild(badge);
+  hero.appendChild(el('p','lead','当前档位'));
+  const title=el('h2','type-title',r.name);
+  title.id='typeTitle';
+  hero.appendChild(title);
+  hero.appendChild(el('p','punch',r.punch));
+  hero.appendChild(el('p','egg',r.engine));
+  const tags=el('div','tags');
+  tags.appendChild(el('span','tag','主导 · '+r.dominantName));
+  tags.appendChild(el('span','tag',r.tierId));
+  tags.appendChild(el('span','tag','指数 '+r.index));
+  hero.appendChild(tags);
+  hero.appendChild(el('p','note','主导倾向取六维最高分；并列时按 成熟→元气→被护→掌舵→安稳→活力 优先。指数由成熟/被护/安稳正向与元气/掌舵/活力反向合成。'));
+  root.appendChild(hero);
+
+  const radar=el('section','card');
+  radar.id='radarCard';
+  radar.appendChild(el('h2','st','六维雷达'));
+  const box=el('div','radar-box');
+  box.innerHTML=radarSVG(r);
+  radar.appendChild(box);
+  const grid=el('div','score-grid');
+  DIM_IDS.forEach(id=>{
+    const row=el('div','bar');
+    const h=el('div','bar-h');
+    h.appendChild(document.createTextNode(DIM_META[id].name));
+    h.appendChild(el('b',null,String(r.scores[id])));
+    row.appendChild(h);
+    const track=el('div','bar-track');
+    const fill=el('div','bar-fill');
+    fill.style.width=r.scores[id]+'%';
+    track.appendChild(fill);
+    row.appendChild(track);
+    grid.appendChild(row);
+  });
+  radar.appendChild(grid);
+  radar.appendChild(el('p','fine','外圈是 100。越靠外，这一维自我报告倾向越明显。指数高偏大叔恋气质，低偏姐弟恋气质；皆为娱乐向线索。'));
+  root.appendChild(radar);
+
+  const feat=el('section','card');
+  feat.appendChild(el('h2','st','特征表现'));
+  const ul=el('ul','bullets');
+  r.traits.forEach(t=>{const li=el('li');li.textContent=t;ul.appendChild(li)});
+  feat.appendChild(ul);
+  root.appendChild(feat);
+
+  const adv=el('section','card');
+  adv.appendChild(el('h2','st','相处小建议'));
+  const ul2=el('ul','bullets');
+  r.advice.forEach(t=>{const li=el('li');li.textContent=t;ul2.appendChild(li)});
+  adv.appendChild(ul2);
+  root.appendChild(adv);
+
+  const dimCard=el('section','card');
+  dimCard.appendChild(el('h2','st','六维速读'));
+  DIM_IDS.forEach(id=>{
+    const block=el('div','dim-read');
+    const head=el('div','dim-head');
+    head.appendChild(el('span','dn',DIM_META[id].name+(id===r.dominant?' · 主导':'')));
+    head.appendChild(el('span','ds',String(r.scores[id])));
+    block.appendChild(head);
+    const tip=r.scores[id]>=67?DIM_META[id].high:(r.scores[id]<=33?DIM_META[id].low:DIM_META[id].tip);
+    block.appendChild(el('p',null,tip));
+    dimCard.appendChild(block);
+  });
+  root.appendChild(dimCard);
+
+  if(r.index>=86 || r.tierId==='DAD'){
+    const safe=el('p','safety');
+    safe.textContent=SAFETY_NOTE;
+    root.appendChild(safe);
+  }
+
+  const disc=el('p','disclaimer');
+  fillDisclaimer(disc);
+  root.appendChild(disc);
+}
+function resultText(r){
+  return [
+    '【年上年下恋爱测试】',
+    r.name+' · 大叔恋指数 '+r.index,
+    r.punch,
+    '主导倾向：'+r.dominantName,
+    r.engine,
+    '六维：'+DIM_IDS.map(id=>DIM_META[id].name+r.scores[id]).join(' / '),
+    '特征：'+r.traits.slice(0,3).join('；'),
+    DISCLAIMER,
+    URL_
+  ].filter(Boolean).join('\n');
+}
+function copyText(){
+  if(!current) return;
+  const text=resultText(current);
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('已复制结果文案')).catch(()=>fallbackCopy(text));
+  }else fallbackCopy(text);
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制结果文案')}catch(e){toast('复制失败，请手动长按选择')}
+  document.body.removeChild(ta);
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+function wrapT(ctx,text,maxW){
+  const chars=String(text).split('');
+  const lines=[]; let line='';
+  for(const ch of chars){
+    const t=line+ch;
+    if(ctx.measureText(t).width>maxW && line){lines.push(line);line=ch}
+    else line=t;
+  }
+  if(line) lines.push(line);
+  return lines;
+}
+function drawRadarCanvas(ctx,cx,cy,R,scores){
+  const n=6;
+  const pt=(i,v)=>{
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const rr=Math.max(0,Math.min(100,v))/100*R;
+    return [cx+rr*Math.cos(a), cy+rr*Math.sin(a)];
+  };
+  [25,50,75,100].forEach(k=>{
+    ctx.beginPath();
+    for(let i=0;i<n;i++){
+      const p=pt(i,k);
+      if(i===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=k===100||k===50?'#D8B898':'#E8D4C0';
+    ctx.lineWidth=k===100?1.6:1;
+    ctx.stroke();
+  });
+  for(let i=0;i<n;i++){
+    const p=pt(i,100);
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(p[0],p[1]);
+    ctx.strokeStyle='#E8D4C0';ctx.lineWidth=1;ctx.stroke();
+  }
+  ctx.beginPath();
+  DIM_IDS.forEach((id,i)=>{
+    const p=pt(i,scores[id]);
+    if(i===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(196,122,58,0.38)';
+  ctx.strokeStyle='#A35A28';
+  ctx.lineWidth=2.4;
+  ctx.fill();ctx.stroke();
+  DIM_IDS.forEach((id,i)=>{
+    const p=pt(i,scores[id]);
+    ctx.beginPath();ctx.arc(p[0],p[1],4,0,Math.PI*2);
+    ctx.fillStyle='#FBF6F0';ctx.strokeStyle='#C47A3A';ctx.lineWidth=2;ctx.fill();ctx.stroke();
+    const a=-Math.PI/2+(i*2*Math.PI)/n;
+    const lx=cx+(R+28)*Math.cos(a), ly=cy+(R+28)*Math.sin(a);
+    ctx.fillStyle='#2C2118';ctx.font='600 13px '+FONT;
+    ctx.textAlign=Math.abs(Math.cos(a))<0.35?'center':(Math.cos(a)>0?'left':'right');
+    ctx.fillText(DIM_META[id].name,lx,ly);
+  });
+}
+function buildShare(r){
+  const W=750, H=1200;
+  const cv=document.createElement('canvas');
+  cv.width=W;cv.height=H;
+  const x=cv.getContext('2d');
+  const g=x.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#FFFCF8');g.addColorStop(1,'#F3E8DC');
+  x.fillStyle=g;x.fillRect(0,0,W,H);
+  function T(t,tx,ty,s,col,wt){x.fillStyle=col;x.font=(wt||'600')+' '+s+'px '+FONT;x.fillText(t,tx,ty)}
+  roundRect(x,40,48,W-80,H-96,28);
+  x.fillStyle='#FFFCF8';x.fill();
+  x.strokeStyle='#E8D4C0';x.lineWidth=2;x.stroke();
+  T('年上年下恋爱测试',70,110,22,'#A35A28','700');
+  T(r.name,70,180,44,'#2C2118','700');
+  T('大叔恋指数 '+r.index,70,230,26,'#6A4A32','700');
+  const punchLines=wrapT(Object.assign(x,{font:'500 24px '+FONT})||x, r.punch, W-160);
+  x.font='500 24px '+FONT;x.fillStyle='#4A3828';
+  punchLines.slice(0,3).forEach((ln,i)=>x.fillText(ln,70,280+i*36));
+  drawRadarCanvas(x,W/2,560,140,r.scores);
+  let y=760;
+  x.font='600 22px '+FONT;x.fillStyle='#2C2118';x.fillText('特征表现',70,y);
+  y+=36;
+  x.font='400 20px '+FONT;x.fillStyle='#4A3828';
+  r.traits.slice(0,3).forEach(t=>{
+    wrapT(x,'· '+t,W-160).slice(0,2).forEach(ln=>{x.fillText(ln,70,y);y+=30});
+    y+=8;
+  });
+  y=Math.max(y,1040);
+  x.font='400 16px '+FONT;x.fillStyle='#B08A6A';
+  x.fillText('娱乐向 · 非正式心理测量 · 非年龄歧视',70,y);
+  x.fillText(URL_,70,y+28);
+  return cv.toDataURL('image/png');
+}
+function showShare(){
+  if(!current) return;
+  try{
+    const url=buildShare(current);
+    window.__shareUrl=url;
+    $('shareImg').src=url;
+    $('ov').classList.add('show');
+    $('ov').setAttribute('aria-hidden','false');
+  }catch(e){
+    console.error(e);
+    toast('生成卡片失败，请截图保存');
+  }
+}
+function renderQ(){
+  const total=QS.length;
+  const q=QS[order[qi]];
+  $('qprog').textContent=(qi+1)+' / '+total;
+  $('fill').style.width=((qi)/total*100)+'%';
+  $('qno').textContent='第 '+(qi+1)+' 题';
+  $('qtext').textContent=q.t;
+  const box=$('opts');
+  box.textContent='';
+  CHOICES.forEach(c=>{
+    const b=el('button','opt');
+    b.type='button';
+    const num=el('span','onum',String(c.v));
+    b.appendChild(num);
+    b.appendChild(document.createTextNode(c.t));
+    if(ans[qi]===c.v) b.classList.add('sel');
+    b.onclick=()=>pick(c.v);
+    box.appendChild(b);
+  });
+}
+function pick(v){
+  if(picking) return;
+  picking=true;
+  ans[qi]=v;
+  renderQ();
+  setTimeout(()=>{
+    if(qi<QS.length-1){qi++;picking=false;renderQ()}
+    else {picking=false;finish()}
+  },180);
+}
+function finish(){
+  show('loading');
+  setTimeout(()=>{
+    const scores=scoreFromAnswers(ans);
+    const report=analyze(scores);
+    try{
+      const saved=Object.assign({tierId:report.tierId,name:report.name,index:report.index,dominant:report.dominant,punch:report.punch,at:Date.now()}, scores);
+      localStorage.setItem(LAST_KEY, JSON.stringify(saved));
+    }catch(e){}
+    refreshLastBtn();
+    renderResult(report);
+    show('result');
+  },900);
+}
+function isUnlocked(){try{return sessionStorage.getItem(ACCESS_KEY)==='1'}catch(e){return false}}
+function setUnlocked(code){
+  try{
+    sessionStorage.setItem(ACCESS_KEY,'1');
+    if(code) sessionStorage.setItem(ACCESS_CODE_KEY,code);
+  }catch(e){}
+}
+function clearUnlock(){
+  try{
+    sessionStorage.removeItem(ACCESS_KEY);
+    sessionStorage.removeItem(ACCESS_CODE_KEY);
+  }catch(e){}
+}
+function sessionCode(){
+  try{return normalizeCode(sessionStorage.getItem(ACCESS_CODE_KEY)||'')}catch(e){return ''}
+}
+function normalizeCode(v){
+  return String(v||'')
+    .trim()
+    .replace(/[\uFF21-\uFF3A]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0xFF21+65))
+    .replace(/[\uFF10-\uFF19]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0xFF10+48))
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g,'');
+}
+function openCodeModal(prefill){
+  $('codeMask').classList.add('show');
+  $('codeMask').setAttribute('aria-hidden','false');
+  document.body.classList.add('lock');
+  const inp=$('codeInput');
+  if(prefill!=null) inp.value=prefill;
+  setTimeout(()=>inp.focus(),40);
+}
+function closeCodeModal(){
+  $('codeMask').classList.remove('show');
+  $('codeMask').setAttribute('aria-hidden','true');
+  document.body.classList.remove('lock');
+}
+function startQuiz(){
+  ans=[];qi=0;picking=false;
+  order=shuffle(QS.map((_,i)=>i));
+  closeCodeModal();
+  show('quiz');
+  renderQ();
+}
+function setCodeBusy(busy){
+  const btn=$('btnCodeOk');
+  btn.disabled=!!busy;
+  btn.textContent=busy?'验证中…':'开始答题';
+}
+function refreshLastBtn(){
+  let has=false;
+  try{has=!!localStorage.getItem(LAST_KEY)}catch(e){}
+  $('btnLast').hidden=!has;
+}
+function clampScore(n){
+  n=Number(n);
+  if(!Number.isFinite(n)) return null;
+  return Math.max(0, Math.min(100, Math.round(n)));
+}
+function showLast(){
+  let data=null;
+  try{data=JSON.parse(localStorage.getItem(LAST_KEY)||'null')}catch(e){data=null}
+  if(!data){toast('还没有上次结果');refreshLastBtn();return}
+  const scores={};
+  for(const id of DIM_IDS){
+    const v=clampScore(data[id]);
+    if(v==null){toast('还没有上次结果');refreshLastBtn();return}
+    scores[id]=v;
+  }
+  renderResult(analyze(scores));
+  show('result');
+  toast('已打开上次结果，本次不扣次');
+}
+async function apiFetch(url, opts){
+  const ctl=new AbortController();
+  const timer=setTimeout(()=>ctl.abort(),12000);
+  try{return await fetch(url, Object.assign({}, opts, {signal:ctl.signal}))}
+  finally{clearTimeout(timer)}
+}
+async function peekVault(code){
+  const r=await apiFetch(API_BASE+'/get?quiz='+encodeURIComponent(QUIZ_KEY)+'&code='+encodeURIComponent(code));
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error('net '+r.status);
+  const data=await r.json();
+  if(!data||data.ok===false){
+    if(data&&(data.error==='not_found'||data.error==='invalid')) return null;
+    throw new Error((data&&data.error)||('net '+r.status));
+  }
+  return data;
+}
+async function redeemVault(code){
+  const r=await apiFetch(API_BASE+'/redeem',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({quiz:QUIZ_KEY,code})
+  });
+  let data=null;
+  try{data=await r.json()}catch(e){
+    if(r.status===404) return {ok:false,reason:'invalid'};
+    throw new Error('net '+r.status);
+  }
+  if(!data||!data.ok){
+    if(data&&data.error==='exhausted') return {ok:false,reason:'exhausted'};
+    if(r.status===404||(data&&(data.error==='not_found'||data.error==='invalid'))) return {ok:false,reason:'invalid'};
+    return {ok:false,reason:(data&&data.error)||('net '+r.status)};
+  }
+  return {ok:true,remaining:data.remaining,max:data.max||3};
+}
+async function tryUnlock(fromUrl){
+  if(codeBusy) return false;
+  const code=normalizeCode($('codeInput').value);
+  $('codeInput').value=code;
+  if(!code){if(!fromUrl) toast('请输入验证码');return false}
+  if(!CODE_RE.test(code)){if(!fromUrl) toast('验证码不正确');return false}
+  codeBusy=true;
+  setCodeBusy(true);
+  try{
+    const out=await redeemVault(code);
+    if(out.ok){
+      setUnlocked(code);
+      const left=out.remaining;
+      toast(left>0?('验证成功，还可以测 '+left+' 次'):'验证成功，这是本码最后一次');
+      startQuiz();
+      return true;
+    }
+    if(!fromUrl) toast(out.reason==='exhausted'?'此验证码已用完（每个码限 3 次）':'验证码不正确');
+    return false;
+  }catch(e){
+    console.error(e);
+    if(!fromUrl) toast('网络异常，请稍后重试');
+    return false;
+  }finally{
+    codeBusy=false;
+    setCodeBusy(false);
+  }
+}
+
+$('btnStart').onclick=()=>{if(isUnlocked()){startQuiz();return} openCodeModal(null)};
+$('btnLast').onclick=()=>showLast();
+$('btnViewLast').onclick=()=>showLast();
+$('btnCodeOk').onclick=()=>tryUnlock(false);
+$('codeInput').addEventListener('keydown',e=>{if(e.key==='Enter') tryUnlock(false)});
+$('codeInput').addEventListener('input',()=>{
+  const input=$('codeInput');
+  const v=input.value.toUpperCase();
+  if(v!==input.value){const p=input.selectionStart;input.value=v;try{input.setSelectionRange(p,p)}catch(e){}}
+});
+$('codeClose').onclick=closeCodeModal;
+$('codeMask').addEventListener('click',e=>{if(e.target===$('codeMask')) closeCodeModal()});
+$('qback').onclick=()=>{
+  if(picking) return;
+  if(qi>0){qi--;renderQ()}
+  else show('start');
+};
+$('btnRetry').onclick=()=>{
+  let pre='';
+  try{pre=sessionStorage.getItem(ACCESS_CODE_KEY)||''}catch(e){}
+  clearUnlock();
+  openCodeModal(pre);
+};
+$('btnCopy').onclick=copyText;
+$('btnImg').onclick=showShare;
+$('btnClose').onclick=()=>{$('ov').classList.remove('show');$('ov').setAttribute('aria-hidden','true')};
+$('btnDl').onclick=()=>{
+  if(!window.__shareUrl) return;
+  const a=document.createElement('a');
+  a.href=window.__shareUrl;a.download='age-gap-love.png';
+  document.body.appendChild(a);a.click();a.remove();
+};
+
+fillDisclaimer($('startDisclaimer'));
+refreshLastBtn();
+(function bootFromUrl(){
+  try{
+    const u=new URL(location.href);
+    const c=normalizeCode(u.searchParams.get('code')||'');
+    if(c&&CODE_RE.test(c)){
+      $('codeInput').value=c;
+      if(!isUnlocked()) openCodeModal(c);
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
